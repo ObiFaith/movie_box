@@ -20,7 +20,7 @@ export default async function GetApiData() {
 			id: data.id,
 			title: data.title, 
 			country: data.original_language,
-			image: data.backdrop_path,
+			image: data.poster_path,
 			percentage: data.vote_average * 10,
 			year: data.release_date.split('-')[0],
 		}));

@@ -1,7 +1,7 @@
 import imdb from '../Img/imdb.png';
 import fruit from '../Img/fruit.png'
 
-const Rating = ({rate}) => {
+const Rating = ({rate = '97%'}) => {
     return(
         <div className="d-flex rating">
             <div className='d-flex'>

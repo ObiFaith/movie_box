@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import GetApiData from "./Api";
-import Card from "./Card"; // Import your Card component here
 
 const MainSection = () => {
   const [cards, setCards] = useState([]);
@@ -24,7 +23,7 @@ const MainSection = () => {
         <h2>Featured Movies</h2>
         <a href="#">See more <i className='fa-solid fa-chevron-right'></i></a>
       </div>
-      <div className="cards d-flex">
+      <div className="cards">
         {cards}
       </div>
     </main>

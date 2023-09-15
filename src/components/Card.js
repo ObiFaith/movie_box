@@ -10,11 +10,11 @@ const Card = ({title, country, image, percentage, year}) => {
 
     return (
         <div className="card">
-            <img className="card-img" src={image} alt='#'/>
+            <img className="card-img" src={`https://image.tmdb.org/t/p/w500${image}`} alt='#'/>
             <div>
-                <div className="card-release">{cty}, {year} - Current</div>
+                <div className="card-release">{cty}, {year}</div>
                 <h3 className="card-tile">{title}</h3>
-                <Rating rate={percentage}/>
+                <Rating rate={`${percentage}%`}/>
                 <div>Action, Adventure, Horror</div>
             </div>
         </div>

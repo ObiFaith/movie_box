@@ -56,26 +56,31 @@ nav, header .input-group{display: none;}
 .hero_content h1{font-size: clamp(var(--fs-700), 2.5vw, var(--fs-800)); margin-bottom: 1rem;}
 .hero_content .hero-text{margin-block: 1rem; font-weight: 500; font-size: var(--fs-300);}
 .rating{font-weight: 400; font-size: var(--fs-200);}
-.rating img{width: 1.8rem;}
+.rating img{width: 1.4rem;}
+.rating .d-flex{gap: .3rem;}
 .rating .d-flex:last-child{margin-left: auto;}
-main{padding-block: 4.5rem;}
+main, footer{padding-block: 4.5rem;}
 main .main_intro{padding-bottom: 2.5rem;}
 .main_intro h2{font-weight: 700; font-size: clamp(var(--fs-600), 2.35vw, var(--fs-800));}
 .main_intro a{color: var(--clr-pink); font-weight: 400; font-size: var(--fs-500);}
-main .cards {flex-wrap: wrap; justify-content: space-between;}
-.card .card{box-shadow: 0 0 5px rgba(0, 0, 0, .2);}
-.card .card > div{display: flex; flex-direction: column; padding: .75rem;}
-.card .card-img{max-width: 15.625rem;}
-.card .rating img{width: 1.3rem;}
-.card .card-tile{color: var(--clr-dark-blue); font-size: var(--fs-500);}
-.card .card-release{font-weight: 400;}
-
+main .cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr)); gap: 2.5rem;}
+.cards .card{box-shadow: 0 0 5px rgba(0, 0, 0, .3);max-width: 15.625rem; display: grid; margin-inline: auto;}
+.cards .card > div{display: flex; flex-direction: column; padding: .75rem;}
+.cards .rating img{width: 1.2rem;}
+.cards .card-tile, .footer .socials{color: var(--clr-dark-blue); font-size: var(--fs-500);}
+.cards .card-release{font-weight: 400;}
+footer{ text-align: center;}
+.footer div{color: var(--clr-dark); margin-bottom: var(--fs-500);}
+.footer .socials {width: 50%; margin-inline: auto;}
+.footer .socials + div{display: flex; flex-direction: column;}
 
 @media screen and (min-width: 800px) {
     header .input-group{flex-grow: 1; display: block; position: relative;}
     .input-group .input-icon{position: absolute; right: 18%; top: 10px}
     .nav_visible{width: 35%;}
     main .cards {gap: 1.5rem}
+    .footer{width: 50%; margin-inline: auto;}
+    .footer .socials + div{flex-direction: row;}
 }
 
 /* border: 2px solid red */
